@@ -102,6 +102,7 @@ nav {
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid var(--border);
   padding-top: 60px;
+  background: var(--paper);
 }
 .hero-left {
   display: flex;
@@ -109,6 +110,7 @@ nav {
   justify-content: center;
   padding: 4rem 3rem;
   border-right: 1px solid var(--border);
+  background: var(--cream);
 }
 .hero-tag {
   font-family: var(--mono);
@@ -227,7 +229,7 @@ section { border-bottom: 1px solid var(--border); }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: start;
 }
@@ -264,7 +266,7 @@ section { border-bottom: 1px solid var(--border); }
 
 .skills-layout {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: start;
 }

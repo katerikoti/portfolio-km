@@ -35,6 +35,7 @@
 <body>
 
 <nav>
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;width:100%">
   <div class="nav-logo">km<span>.</span>dev</div>
   <ul class="nav-links">
     <li><a href="#about" id="nav-about" data-fi="Tietoa">About</a></li>
@@ -50,7 +51,25 @@
       </div>
     </li>
   </ul>
+  <div class="nav-mobile-right">
+    <div class="lang-switcher lang-switcher-mobile">
+      <button data-lang="en" class="active">EN</button>
+      <span class="lang-sep">/</span>
+      <button data-lang="fi">FI</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#about" id="mob-about" data-fi="Tietoa">About</a>
+  <a href="#skills" id="mob-skills" data-fi="Taidot">Skills</a>
+  <a href="#services" id="mob-services" data-fi="Palvelut">Services</a>
+  <a href="#projects" id="mob-projects" data-fi="Projektit">Projects</a>
+  <a href="#contact" id="mob-contact" data-fi="Yhteystiedot">Contact</a>
+</div>
 
 <section class="hero" id="hero">
   <div class="hero-left">
@@ -354,6 +373,12 @@
   <span>© 2026 Katerina Mäenpää</span>
   <span id="footer-right" data-fi="Web-kehittäjä, Joensuu, Suomi">Web Developer, Joensuu, Finland</span>
 </footer>
+
+<button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
 
 <template id="ticker-fi">
   Web-kehittäjä <span class="tdot"></span> Avoinna freelance-töille <span class="tdot"></span> Avoin yhteistyölle <span class="tdot"></span> Kotipaikka Suomi <span class="tdot"></span> Web-kehittäjä <span class="tdot"></span> Avoinna freelance-töille <span class="tdot"></span> Avoin yhteistyölle <span class="tdot"></span> Kotipaikka Suomi <span class="tdot"></span> Web-kehittäjä <span class="tdot"></span> Avoinna freelance-töille <span class="tdot"></span> Avoin yhteistyölle <span class="tdot"></span> Kotipaikka Suomi <span class="tdot"></span> Web-kehittäjä <span class="tdot"></span> Avoinna freelance-töille <span class="tdot"></span> Avoin yhteistyölle <span class="tdot"></span> Kotipaikka Suomi <span class="tdot"></span>

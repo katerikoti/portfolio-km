@@ -206,7 +206,7 @@ nav {
 }
 
 section { border-bottom: 1px solid var(--border); }
-.section-inner { padding: 5rem 3rem; max-width: 1000px; margin: 0 auto; }
+.section-inner { padding: 5rem 3rem; }
 .section-label {
   font-family: var(--mono);
   font-size: 10px;

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="4" fill="#1e1a17"/>
+  <text x="4" y="21" font-family="monospace" font-size="13" font-weight="500" fill="#faf7f2" letter-spacing="0.5">km</text>
+  <circle cx="27" cy="22" r="2.5" fill="#c4788a"/>
+</svg>

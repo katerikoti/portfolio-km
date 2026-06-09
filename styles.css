@@ -102,6 +102,8 @@ nav {
   grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid var(--border);
   padding-top: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .hero-left {
   display: flex;
@@ -206,7 +208,7 @@ nav {
 }
 
 section { border-bottom: 1px solid var(--border); }
-.section-inner { padding: 5rem 3rem; }
+.section-inner { padding: 5rem 3rem; max-width: 1000px; margin: 0 auto; }
 .section-label {
   font-family: var(--mono);
   font-size: 10px;
@@ -340,6 +342,8 @@ section { border-bottom: 1px solid var(--border); }
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .project-card {
   padding: 2rem 2.25rem;
@@ -477,6 +481,8 @@ footer {
   font-size: 11px;
   color: var(--muted);
   letter-spacing: 0.05em;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 @keyframes fadeUp {

@@ -19,10 +19,11 @@
 html { scroll-behavior: smooth; }
 
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  padding: 0 1.5rem;
 }
 
 body {
@@ -214,8 +215,13 @@ nav {
   vertical-align: middle;
 }
 
-section { border-bottom: 1px solid var(--border); }
-.section-inner { padding: 5rem 3rem; }
+.section { border-bottom: 1px solid var(--border); }
+.section-inner { padding: 5rem 3rem; max-width: 1000px; margin: 0 auto; width: 100%; }
+
+/* Constrain larger full-width blocks to the same content width */
+.hero { max-width: 1000px; margin: 0 auto; }
+.projects-grid { max-width: 1000px; margin: 0 auto; }
+.ticker-wrap { max-width: 1000px; margin: 0 auto; }
 .section-label {
   font-family: var(--mono);
   font-size: 10px;

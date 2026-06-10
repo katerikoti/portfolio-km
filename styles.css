@@ -105,20 +105,25 @@ nav {
 }
 
 .hero {
+  width: 100%;
+  position: relative;
   min-height: 100vh;
+  background: linear-gradient(90deg, var(--cream) 0 50%, var(--paper) 50% 100%);
+}
+.hero-inner {
+  max-width: 1000px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
   border-bottom: 1px solid var(--border);
   padding-top: 60px;
-  background: var(--paper);
 }
 .hero-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 4rem 3rem;
-  border-right: 1px solid var(--border);
-  background: var(--cream);
 }
 .hero-tag {
   font-family: var(--mono);
@@ -140,11 +145,15 @@ nav {
 }
 .hero h1 {
   font-family: var(--serif);
-  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1.0;
   letter-spacing: -0.01em;
   margin-bottom: 1.75rem;
   color: var(--dark);
+}
+.hero-left h1 {
+  max-width: 420px;
+  overflow-wrap: break-word;
 }
 .hero h1 em { font-style: italic; color: var(--rose); }
 .hero-desc {
@@ -183,7 +192,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   padding: 4rem 3rem;
-  background: var(--paper);
 }
 .hero-meta { display: flex; flex-direction: column; }
 .hero-meta-row {
@@ -219,9 +227,7 @@ nav {
 .section-inner { padding: 5rem 3rem; max-width: 1000px; margin: 0 auto; width: 100%; }
 
 /* Constrain larger full-width blocks to the same content width */
-.hero { max-width: 1000px; margin: 0 auto; }
 .projects-grid { max-width: 1000px; margin: 0 auto; }
-.ticker-wrap { max-width: 1000px; margin: 0 auto; }
 .section-label {
   font-family: var(--mono);
   font-size: 10px;
@@ -461,6 +467,7 @@ nav {
   padding: 0.7rem 0;
   white-space: nowrap;
 }
+.ticker-inner { overflow: hidden; }
 .ticker {
   display: inline-block;
   animation: ticker 30s linear infinite;
@@ -623,8 +630,11 @@ footer {
   .nav-mobile-right { display: flex; }
   .hamburger { display: flex; }
   .mobile-menu { display: flex; }
-  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-inner { grid-template-columns: 1fr; min-height: auto; }
   .hero-left { padding: 4rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid var(--border); }
+  /* On mobile, make the hero background single-column and apply the darker background to the right block when stacked */
+  .hero { background: var(--cream); }
+  .hero-right { background: var(--paper); }
   .hero-right { padding: 2rem 1.5rem 3rem; }
   .section-inner { padding: 3.5rem 1.5rem; }
   .about-grid, .contact-layout, .skills-layout { grid-template-columns: 1fr; gap: 2.5rem; }

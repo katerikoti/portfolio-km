@@ -71,4 +71,25 @@ document.addEventListener('DOMContentLoaded', () => {
   scrollBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // ── Mobile hero full-width backgrounds ──
+  function updateHeroMobileBg() {
+    const hero = document.getElementById('hero');
+    const heroLeft = document.querySelector('.hero-left');
+    if (!hero || !heroLeft) return;
+    if (window.innerWidth > 800) {
+      hero.style.removeProperty('--hero-right-top');
+      return;
+    }
+    const heroRect = hero.getBoundingClientRect();
+    const leftRect = heroLeft.getBoundingClientRect();
+    const top = leftRect.bottom - heroRect.top;
+    hero.style.setProperty('--hero-right-top', Math.max(0, Math.round(top)) + 'px');
+  }
+
+  window.addEventListener('resize', () => updateHeroMobileBg());
+  // run after images/fonts load to get correct sizes
+  window.addEventListener('load', () => updateHeroMobileBg());
+  // also run now in case DOM is ready
+  updateHeroMobileBg();
 });

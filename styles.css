@@ -116,7 +116,6 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
-  border-bottom: 1px solid var(--border);
   padding-top: 60px;
 }
 .hero-left {
@@ -462,10 +461,32 @@ nav {
 
 .ticker-wrap {
   overflow: hidden;
-  border-bottom: 1px solid var(--border);
+  position: relative;
   background: var(--paper);
   padding: 0.7rem 0;
   white-space: nowrap;
+}
+
+/* Full-width bottom border for the banner */
+.ticker-wrap::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Full-width top border for the banner */
+.ticker-wrap::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: var(--border);
 }
 .ticker-inner { overflow: hidden; }
 .ticker {
@@ -484,6 +505,8 @@ nav {
 .tdot {
   display: inline-block;
   width: 3px; height: 3px;
+.ticker-wrap { width: 100%; }
+.ticker-inner { max-width: none; width: 100%; margin: 0; padding: 0; overflow: hidden; }
   border-radius: 50%;
   background: var(--rose);
   margin: 0 1.5rem;
